@@ -6,10 +6,10 @@ export default function Copyright() {
 
   return (
     <Typography mt="-2" variant="body2" align="center" sx={{ color: 'text.secondary' }}>
-      &copy; Tushar Jaiswal| Open Source &nbsp;
+      &copy; Prathmesh Kulkarni | Open Source &nbsp;
       <FavoriteIcon color="error" sx={{ fontSize: 18, mb: '-2px', ml: '-5px' }} /><br />
-      <Link variant="subtitle3" component={'a'} href="https://github.com/tuzup/SplitApp/" target="_blank">
-        {/* [Tushar Jaiswal] */}
+      <Link variant="subtitle3" component={'a'} href="https://github.com/prathmeshkulakrni/BudgetBuddy" target="_blank">
+        {/* [Prathmesh Kulkarni] */}
       </Link>
     </Typography>
   )
