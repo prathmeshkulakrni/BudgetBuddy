@@ -5,8 +5,8 @@ export default function Card(theme) {
     MuiCard: {
       styleOverrides: {
         root: {
-          boxShadow: theme.shadows[2],
-          borderRadius: Number(theme.shape.borderRadius) * 2,
+          boxShadow: theme.customShadows ? theme.customShadows.z16 : theme.shadows[10],
+          borderRadius: 24,
           position: 'relative',
           zIndex: 0, // Fix Safari overflow: hidden with border radius
         },

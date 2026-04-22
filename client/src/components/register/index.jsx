@@ -16,6 +16,8 @@ import Copyright from '../Copyright';
 const RootStyle = styled('div')(({
     theme
 }) => ({
+    background: `linear-gradient(135deg, ${theme.palette.primary.darker} 0%, ${theme.palette.secondary.main} 100%)`,
+    minHeight: '100vh',
     [theme.breakpoints.up('md')]: {
         display: 'flex',
     },
@@ -46,16 +48,24 @@ const SectionStyle = styled(Card)(({ theme }) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     margin: theme.spacing(2, 0, 2, 2),
+    background: 'transparent',
+    boxShadow: 'none',
   }));
   
   const ContentStyle = styled('div')(({ theme }) => ({
     maxWidth: 480,
     margin: 'auto',
-    minHeight: '100vh',
+    marginTop: theme.spacing(12),
+    marginBottom: theme.spacing(12),
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
-    padding: theme.spacing(12, 0),
+    padding: theme.spacing(6),
+    background: 'rgba(255, 255, 255, 0.75)',
+    backdropFilter: 'blur(20px)',
+    borderRadius: 24,
+    boxShadow: theme.shadows[10],
+    border: '1px solid rgba(255, 255, 255, 0.5)',
   }));
 
 export default function Login() {
@@ -77,7 +87,7 @@ export default function Login() {
         {mdUp && (
           <SectionStyle>
             <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-            Manage the expense more effectively with SplitApp !
+            Manage the expense more effectively with BudgetBuddy !
             </Typography>
             <img src="/static/illustrations/illustration_register.png" alt="login" />
           </SectionStyle>
